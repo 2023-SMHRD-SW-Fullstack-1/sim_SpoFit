@@ -1,5 +1,5 @@
 
-## 🚴‍♀️🚴‍♂️Do your Challenge! ( 팀명 : Spo-Fit )
+## 🚴‍♀🚴‍♂Do your Challenge! ( 팀명 : Spo-Fit )
 
  # ![image] (main)
 
