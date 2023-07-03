@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace = "com.smhrd.spofit.mapper.ChallengeMapper">
+  
+	<update id="updateCusChallenge" parameterType="com.smhrd.spofit.domain.Challenge">
+		update t_custom 
+		set cus_title='${chal_title}', cus_doc='${chal_doc}', cus_gdt=${chal_gdt}
+		where cus_seq = ${cus_seq} and m_seq=${m_seq}
+	</update>
+	
+	<insert id="createCusChallenge" parameterType="com.smhrd.spofit.domain.Challenge">
+		insert into t_custom (cus_title, cus_doc, cus_gdt, m_seq, writer_nick)
+			values ('${chal_title}', '${chal_doc}', ${chal_gdt}, ${m_seq}, 
+			 (select m_nick from t_member where m_seq =${m_seq})
+			)
+	</insert>
+  </mapper>

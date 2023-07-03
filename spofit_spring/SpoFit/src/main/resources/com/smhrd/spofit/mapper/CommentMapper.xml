@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace = "com.smhrd.spofit.mapper.CommentMapper">
+  
+   <!-- 댓글 목록 가져오기 -->
+    <select id="getComments" resultType="com.smhrd.spofit.domain.Comment">
+        SELECT c.cmt_seq, c.cmt_context, c.cmt_dt, c.b_seq, c.m_seq, m.m_nick
+		FROM t_comment c
+		JOIN t_member m ON c.m_seq = m.m_seq
+		WHERE c.b_seq = #{b_seq}
+    </select>
+
+    <!-- 댓글 생성 -->
+    <insert id="createComment" parameterType="com.smhrd.spofit.domain.Comment">
+        INSERT INTO t_comment (cmt_context, cmt_dt, b_seq, m_seq)
+        VALUES (#{cmt_context}, SYSDATE, #{b_seq}, #{m_seq})
+    </insert>
+    
+    <!-- 댓글 수정 -->
+    <update id="updateComment" parameterType="com.smhrd.spofit.domain.Comment">
+    	UPDATE t_comment
+    	SET cmt_context = #{cmt_context}
+    	WHERE cmt_seq = #{cmt_seq}
+	</update>
+    
+    
+    <!-- 댓글 삭제 -->
+    <delete id="deleteComment" parameterType="int">
+    DELETE FROM t_comment
+    WHERE cmt_seq = #{cmt_seq}
+	</delete>
+	
+	<!-- 각각 댓글 한개  -->
+	<select id="getComment" resultType="com.smhrd.spofit.domain.Comment">
+    SELECT * FROM t_comment WHERE cmt_seq=#{cmt_seq}
+	</select>
+	
+	    
+</mapper>

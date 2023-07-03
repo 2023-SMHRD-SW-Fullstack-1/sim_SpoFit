@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logoName{
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    font-family: 'IBMPlexSansKR-Regular';
+    
+}
+.login-join{
+    display: flex;
+    justify-content: flex-end;
+
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    z-index: 9999;
+
+}
+
+
+@font-face {
+    font-family: 'HSJiptokki-Round';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSJiptokki-Round.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+.footerLogoName{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: 'HSJiptokki-Round';
+    color: aliceblue;
+
+}
+.pName{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    color: aliceblue;
+    }      
+/* .sideBar{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 70vh;
+    width: 20px;
+} */

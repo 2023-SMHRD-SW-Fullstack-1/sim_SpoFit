@@ -1,0 +1,171 @@
+
+#list1 .form-control {
+    border-color: transparent;
+  }
+  #list1 .form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  #list1 .select-input.form-control[readonly]:not([disabled]) {
+    background-color: #fbfbfb;
+  }
+.pb-2 h4{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.tB2{
+    display: flex;
+    width: 100px;
+    justify-content: flex-end;
+    margin-left: 75%;
+    margin-top: 10px;
+
+}
+.container.py-5{
+    width: 70%;
+}
+.challengeAddBtn{
+    display: flex;
+    justify-content: flex-start !important;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.form-control.form-control-lg1{
+margin-bottom: 10px;
+margin-right: 2%;
+width: 85%;
+box-shadow: 0px 0px 2px 2px rgb(233, 232, 232) !important;
+}
+.addDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.createDiv{
+    margin-top: 10px;
+
+}
+.py-5{
+    margin-top: 30px;
+}
+.goal{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    margin-right: 20px;
+}
+.input1{
+    border-radius: 10px;
+}
+.card{
+    --bs-card-border-color:rgba(169, 169, 169, 0.353) !important;
+}#list1{
+    height: 190px !important;
+    background-color: rgb(253, 253, 253) !important;
+    border-radius: 30px !important;
+}
+#list2{
+
+    height: 70px !important;
+}
+.form-control.form-control-lg{
+    line-height:0%;
+}
+.form-control-lg{
+    font-size :18px !important;
+    padding-top:0 !important;
+    padding-right: 10px !important;
+    width: 90% !important;
+    
+}
+#addButton1{
+    width: 128px;
+    display: flex;
+}
+.btn1{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 98% ;
+    height: 35px;
+    color: rgb(117, 149, 164);
+}
+#btn1{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 98% ;
+    height: 35px;
+    color: rgb(117, 149, 164);
+}
+.myChallengeName{
+    color: rgb(63, 63, 63);
+    font-size: 36px;
+
+}
+.me-3{
+    border-radius: 8px;
+    border: 1px solid rgb(121, 121, 121);
+    text-align: center;
+    width: 110px;
+}
+#challengeDoc{
+    width: 98%;
+    height: 150px;
+    border: 2px solid rgba(201, 200, 200, 0.685) ;
+    border-radius: 8px;
+}
+.btn1{
+    width: 150px;
+    margin: 10px;
+}
+#goalDt{
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid rgb(210, 210, 210);
+    margin-right: 10px;
+    
+}
+#marginBtn{
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+@media screen and (max-width:960px) {
+   #challengeNameInput{
+    margin: 0 !important;
+   }
+   .form-control.form-control-lg1{
+    margin-bottom: 20px !important;
+   }
+   #addButton1{
+    width: 88px;
+    }
+}
+.lL2{
+    text-decoration: none;
+    color: white;
+}
+.challenge-save-font,
+.viewer-writer-box{
+    display: flex;
+    justify-content: center;
+}
+
+.viewer-doc-box{
+    text-align: center;
+}
+.challenge-section{
+    width: 65%;
+    height: 500px;
+}
+.challenge-section3{
+    height: 80%;
+    margin : 2% 10% 5% 17%;
+    padding: 48.1px 42.9px 67.5px 58.2px;
+    border-radius: 20px;
+    border: solid 7px #d7d3d39a;
+    flex-direction: row;    
+    width: 65%;
+  }
+

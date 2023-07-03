@@ -1,0 +1,110 @@
+/* 로그인,회원가입 */
+.LoginJoinDiv{
+    margin-top: 100px;
+}
+.ripple.ripple-surface.btn.btn-primary.mb-4.w-100{
+    margin-top: 50px;
+    margin-bottom: 8% !important;
+    background-color: rgb(42, 149, 255)!important;
+}
+.nav-link.active{
+
+    margin-bottom: 10% !important;
+    background-color: rgb(42, 149, 255)!important;
+}
+.text-center.mb-3 p{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.mb-4{
+    height: 40px;
+}
+.joinNum1{
+    width: 50px;
+    height: 40px;
+    border: 1px solid rgb(186, 186, 186);
+    border-radius: 4px;
+    margin-left: 20px;
+    text-align: center;
+}
+.jumin-mask{
+    font-size: 20px;
+}
+.form-control.active{
+    height: 100% !important;
+}
+@media screen and (max-width:1400px){
+    .joinNum1{
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgb(186, 186, 186);
+        border-radius: 4px;
+        margin-left: 20px;
+        text-align: center;
+    }
+    .jumin-mask{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:1150px){
+    .joinNum1{
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgb(186, 186, 186);
+        border-radius: 4px;
+        margin-left: 20px;
+        text-align: center;
+    }
+    .jumin-mask{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:950px){
+    .form-control{
+        margin-bottom: 60px !important;
+        
+    }
+    .ripple.ripple-surface.btn.btn-primary.mb-4.w-100{
+        margin-top: 30px;
+        margin-bottom: 20% !important;
+    }
+    .jumin-mask{
+        font-size: 9px;
+    }
+    .joinNum1{
+        width: 35px;
+        margin-left: 10px;
+      
+    }
+  
+}
+@media screen and (max-width:700px){
+    .joinNum1{
+        width: 30px; 
+    }
+    .jumin-mask{
+        font-size: 3px;
+    }
+}
+/* 아이디찾기 */
+.lL1{
+    text-decoration: none;
+    color: rgb(1, 1, 167);
+}
+.lL1:hover{
+    color: cornflowerblue;
+}
+/* 아이디 찾기  */
+.findDiv{
+    margin-top: 100px;
+}
+/* 비밀번호 재설정 */
+.pwChangeDiv{
+    margin-top: 220px;
+}
+/* 마이페이지 */
+.m_mypage-content{
+    width: 65%;
+    height: 400px;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace = "com.smhrd.spofit.mapper.ChallengeCheckMapper">
+  	<insert id="saveCheckList">
+  		insert into t_custom_checklist (cus_seq, cus_num, cus_context) values (${cus_seq},${chal_num},'${chal_context}')
+  	</insert>
+  	
+  	<insert id="shareCheckList">
+  		insert into t_checklist (chal_seq, check_num, check_context) values (${chal_seq}, ${chal_num},'${chal_context}')
+  	</insert>
+  </mapper>

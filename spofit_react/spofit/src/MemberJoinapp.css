@@ -1,0 +1,54 @@
+.m-join-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .m-join-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin: 40px 0;
+  }
+  
+  .m-join-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .m-join-input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1px;
+  }
+  
+  .jumin-input {
+    width: 60px;
+  }
+  
+  .jumin-separator {
+    margin: 0 5px;
+  }
+  
+  .jumin-mask {
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  
+  .reset-button {
+    width: 200px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+  }

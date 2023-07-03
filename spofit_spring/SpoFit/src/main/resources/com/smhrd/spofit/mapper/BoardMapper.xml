@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace = "com.smhrd.spofit.mapper.BoardMapper">
+	
+	<!-- board 게시물 조회하기~ -->
+	<select id="select" resultType="com.smhrd.spofit.domain.Board">
+		SELECT a.*, b.m_nick 
+   		 FROM t_community a
+    	 LEFT OUTER JOIN t_member b ON a.m_seq = b.m_seq
+    	 WHERE a.b_type = '자유게시판'
+    	 ORDER BY a.b_dt DESC
+	</select>
+	
+	
+	<!-- 보드 게시물 생성 -->
+	<!--  <insert id="boardInsert" parameterType="com.smhrd.spofit.domain.Board">
+  	 insert into t_community (b_seq, b_title, b_content, b_file, m_seq, b_type, b_dt, b_views)
+   	 values (15, #{b_title}, #{b_content}, #{b_file}, 10, '자유게시판', SYSDATE,20  )
+	</insert>-->
+	<insert id="boardInsert" parameterType="com.smhrd.spofit.domain.Board">
+    insert into t_community (b_seq, b_title, b_content, b_file, m_seq, b_type, b_dt, b_views)
+    values (#{b_seq}, #{b_title}, #{b_content}, #{b_file}, #{m_seq}, #{b_type}, SYSDATE, 1)
+	</insert>
+	
+	<!-- 게시판 타입  -->
+	<select id="selectByBtype" resultType="com.smhrd.spofit.domain.Board">
+    SELECT a.*, b.m_nick 
+    FROM t_community a 
+    LEFT OUTER JOIN t_member b 
+    ON a.m_seq = b.m_seq
+    WHERE a.b_type = #{b_type}
+	</select>
+	
+	<!-- 닉네임  -->
+	<select id="getUserNick" resultType="java.lang.String">
+ 	 SELECT m_nick FROM T_MEMBER WHERE m_seq = #{m_seq}
+	</select>
+	
+  	
+  	<!-- 보드 디테일 (하나 정보 가져오기) -->
+  	<resultMap id="boardResultMap" type="com.smhrd.spofit.domain.Board">
+    <id property="b_seq" column="b_seq" />
+    <result property="b_title" column="b_title" />
+    <result property="b_content" column="b_content" />
+    <result property="b_file" column="b_file" />
+    <result property="b_dt" column="b_dt" />
+    <result property="m_nick" column="m_nick"/>
+  </resultMap>
+  	
+  	<!-- 글 상세보기 -->
+  	
+  <select id="getBoardDetail" resultMap="boardResultMap">
+    SELECT a.*, b.m_nick
+    FROM t_community a
+    LEFT OUTER JOIN t_member b ON a.m_seq = b.m_seq
+    WHERE a.b_seq = #{b_seq}
+</select>
+  
+  
+  <!-- 글 삭제하기 -->
+  <delete id="deleteBoardDetail" parameterType="int">
+    DELETE FROM t_community WHERE b_seq = #{b_seq}
+</delete>
+	
+	<!-- 글 수정하기  -->
+	<update id="updateBoardDetail" parameterType="com.smhrd.spofit.domain.Board"
+	>
+		 UPDATE t_community SET b_title = #{b_title}, b_content = #{b_content} WHERE b_seq = #{b_seq}
+	</update>
+	
+	<!-- 자유게시판 조회수 증가 -->
+	<update id="incBoardViews" parameterType="int">
+    UPDATE t_community SET b_views = b_views + 1 WHERE b_seq = #{b_seq}
+	</update>
+	
+	<!-- 공지사항 생성하기 -->
+	<insert id="noticeInsert" parameterType="com.smhrd.spofit.domain.Board">
+  		INSERT INTO t_community (b_seq, b_title, b_content, m_seq, b_type, b_dt, b_views)
+  		VALUES (#{b_seq}, #{b_title}, #{b_content}, #{m_seq}, #{b_type}, SYSDATE, 1)
+	</insert>
+	
+	<!-- 공지사항 불러오기 -->
+	<select id="getNoticeList" resultType="com.smhrd.spofit.domain.Board">
+		SELECT * FROM t_community
+  		WHERE b_type = '공지사항'
+  		ORDER BY b_dt DESC
+	</select>
+	
+	<!-- 공지사항 조회수 증가 -->
+	<update id="incNoticeViews" parameterType="int">
+    UPDATE t_community SET b_views = b_views + 1 WHERE b_seq = #{b_seq} AND b_type = '공지사항'
+	</update>
+	
+	<!-- 공지사항 관리자 확인  -->
+	<select id="getAdminMSeq" resultType="java.lang.Integer">
+  	SELECT m_seq
+  	FROM t_member
+  	WHERE admin_yn = 'Y'
+	</select>
+	
+	<!-- 공지사항 수정 -->
+	<update id="updateNotice" parameterType="com.smhrd.spofit.domain.Board">
+			UPDATE T_COMMUNITY SET b_title=#{b_title}, b_content=#{b_content} WHERE b_seq = #{b_seq} AND b_type = '공지사항'
+	</update>
+	<!-- 공지사항 삭제 -->
+	<delete id="deleteNotice" >
+		DELETE FROM t_community WHERE b_seq = #{b_seq} AND b_type = '공지사항'
+	</delete>
+  </mapper>

@@ -1,0 +1,30 @@
+.pw-find-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .pw-find-input {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pw-find-verification-button {
+    width: 250px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pw-find-verification-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pw-find-title {
+    margin-bottom: 20px;
+  }
