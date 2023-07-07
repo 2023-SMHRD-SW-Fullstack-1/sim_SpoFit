@@ -28,7 +28,7 @@
   
 <br>
 
-## 기술 스택 
+## 🌐기술 스택 
   <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
   <br>
@@ -44,7 +44,7 @@
 
 <br>
 
-## 유스케이스
+## 😶유스케이스
 ![SpoFitUseCase](https://github.com/2023-SMHRD-SW-Fullstack-1/sim_SpoFit/assets/126782416/b027a470-1b2f-428c-9c2a-980bb59bda75)
 <br>
 
@@ -53,7 +53,7 @@
 <br>
 
 
-## ER-Diagram
+## 📰ER-Diagram
 ![SPOFIT_ERDIAGRAM](https://github.com/2023-SMHRD-SW-Fullstack-1/sim_SpoFit/assets/126782416/c3682a97-65d5-44c1-a2fc-f98e9b90d583)
 <br>
 
@@ -61,7 +61,7 @@
 
 <br>
 
-## 팀원 역할
+## 👨‍👩‍👧‍👧팀원 역할
 
 <table>
   <tr>
@@ -69,12 +69,20 @@
 	<th>역할</th>
   </tr>
   <tr>
-	  <td>김 소 희</td>
+	  <td  colspan="2"><b>김 소 희</b></td>
+	  <td>
+		Front-end(react, css)
+		UI/UX 디자인 총괄
+	  </td>
 	  <td>UI/UX디자인, KaKaoMap API 활용, GitHub 관리, 반응현 웹 관리, 애니메이션 기능</td>
   </tr>
   </tr>
   <tr>
-	  <td>박 정 현</td>
+	  <td  colspan="2"><b>박 정 현</b></td>
+	  <td>
+		Front-end(react, css)
+		Back-end(spring)
+	  </td>
 	  <td>서버 연결 관리
 		챌린지 기능 관리
 		DataBase 설계
@@ -83,7 +91,7 @@
   </tr>
   </tr>
   <tr>
-	  <td>서 유 광 </td>
+	  <td colspan="2"><b>서 유 광</b> </td>
 	  <td>
 		Front-end(react, css)
 		Back-end(spring)
@@ -99,7 +107,7 @@
   </tr>
   </tr>
   <tr>
-	  <td>이 선 아</td>
+	  <td  colspan="2"><b>이 선 아</b></td>
 	  <td> 
 		  Back-end(spring)
 		  Front-end 총괄
@@ -115,6 +123,6 @@
 </table>
 <br>
 
-## 트러블슈팅
+##🎯트러블슈팅
 
 <br>
